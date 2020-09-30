@@ -1,10 +1,15 @@
 import Navbar from '../components/Navbar';
+import { useRouter } from 'next/router';
 
 const Apply = () => {
+  const router = useRouter();
+
   return (
     <section>
       <Navbar />
+
       <div className='grid place-items-center p-10'>
+        <h1 className='mb-16 text-4xl text-green-400'>{router.query.title}</h1>
         <form className='w-full max-w-lg'>
           <div className='flex flex-wrap -mx-3 mb-6'>
             <div className='w-full px-3'>
